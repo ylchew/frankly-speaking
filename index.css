@@ -7,7 +7,8 @@
   --internalpadding: 8px;
   
   --base: 16px;
-  --smaller: 10px;
+  --regular: 12px;
+  --label: 10px;
   --bigger: 16px;
 }
 * {
@@ -27,11 +28,36 @@ h3 {
   padding: var(--largepadding)
 }
 
-.user-text-label {
+.user-panel {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items:center;
+}
+.address {
+  font-size: var(--regular);
+}
+.settings {
+  height: 16px;
+  width: 16px;
+}
+.text-label {
   color: #222;
   font-size: var(--smaller);
 }
 .user-label {
   color: #222;
   font-size: var(--bigger);
+}
+
+.base-grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+ }
+.base-grid > div:first-child {
+  align-items: start;
+  text-align: left;
+}
+.base-grid > div:last-child {
+  align-items: end;
+  text-align: right;
 }
