@@ -1,5 +1,9 @@
 :root {
   font-size: 16px;
+  --padding: 16px;
+  --margin: 16px;
+  --internalmargin: 8px;
+  --internalpadding: 8px;
 }
 
 h1 {
@@ -10,4 +14,8 @@ h2 {
 }
 h3 {
   font-size: 1.25rem; 
+}
+
+.app-interface {
+  padding: var(--padding)
 }
