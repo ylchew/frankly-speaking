@@ -36,7 +36,9 @@ h3 {
 .address {
   font-size: var(--regular);
 }
-.settings {
+li.fi {
+  line-height: 16px;
+  font-size: 16px;
   height: 16px;
   width: 16px;
 }
