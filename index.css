@@ -12,7 +12,7 @@
   --bigger: 16px;
 }
 * {
-  font-famil: Poppins;
+  font-family: Poppins;
 }
 h1 {
   font-size: 2rem;
@@ -32,6 +32,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items:center;
+  grid-auto-flow: column;
 }
 .address {
   font-size: var(--regular);
