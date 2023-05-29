@@ -4,8 +4,14 @@
   --margin: 16px;
   --internalmargin: 8px;
   --internalpadding: 8px;
+  
+  --base: 16px;
+  --smaller: 10px;
+  --bigger: 16px;
 }
-
+* {
+  font-famil: Poppins;
+}
 h1 {
   font-size: 2rem;
 }
@@ -18,4 +24,13 @@ h3 {
 
 .app-interface {
   padding: var(--padding)
+}
+
+.user-text-label {
+  color: #222;
+  font-size: var(--smaller);
+}
+.user-label {
+  color: #222;
+  font-size: bigger;
 }
