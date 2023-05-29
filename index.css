@@ -1,5 +1,6 @@
 :root {
   font-size: 16px;
+  --largepadding: 32px;
   --padding: 16px;
   --margin: 16px;
   --internalmargin: 8px;
@@ -23,7 +24,7 @@ h3 {
 }
 
 .app-interface {
-  padding: var(--padding)
+  padding: var(--largepadding)
 }
 
 .user-text-label {
@@ -32,5 +33,5 @@ h3 {
 }
 .user-label {
   color: #222;
-  font-size: bigger;
+  font-size: var(--bigger);
 }
