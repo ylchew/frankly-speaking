@@ -1,19 +1,23 @@
+<!DOCTYPE html>
+<html>
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-<link rel="stylesheet" type="text/css" href="https://ylchew.github.io/frankly-speaking/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <link rel="stylesheet" type="text/css" href="https://ylchew.github.io/frankly-speaking/index.css">
 </head>
+<body>
+  <react-container></react-container>
 
-<script type="js" crossorigin src="https://unpkg.com/browse/babel-standalone@6.26.0/babel.js"></script>
-<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script type="jsx" src="https://ylchew.github.io/frankly-speaking/app.jsx"></script>
-<script type="text/jsx">
-const container = document.getElementsByTagName('react-container')[0];
-const root = ReactDOM.createRoot(container);
-root.render(<App />);	
-</script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone@7.13.8/babel.min.js"></script>
 
-<react-container></react-container>
+  <script type="text/babel">
+    const container = document.getElementsByTagName('react-container')[0];
+    const root = ReactDOM.createRoot(container);
+    root.render(<App />);
+  </script>
+</body>
+</html>
