@@ -1,24 +1,94 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-  <link rel="stylesheet" type="text/css" href="https://ylchew.github.io/frankly-speaking/index.css">
-</head>
-<body>
-  <react-container></react-container>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+  </head>
+  <body>
+    
+    <react-container></react-container>
+  
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--   <script type="text/jsx" src="./app.jsx"></script> -->
+    
+    <script type="text/jsx">
+      const App = () => {
+        
+        const [ gLanguage, setGLanguage ] = React.useState('English')
+        
+        const WelcomeScreen = () => {
+          
+          const [ language, setLanguage ] = React.useState(
+            {
+              lang: 'English',
+              greeting: 'Hi there!'    
+            }
+          )
+          const dropdown = React.useRef(0)
+          const languages = [
+            {
+              lang: 'English',
+              greeting: 'Hi there!'
+            },
+            {
+              lang: '中文',
+              greeting: '您好!'
+            },
+            {
+              lang: 'Bahasa Melayu',
+              greeting: 'Hai!'
+            },
+            {
+              lang: 'தமிழ்',
+              greeting: 'வணக்கம்!'
+            },
+          ]
 
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="text/jsx" src="https://ylchew.github.io/frankly-speaking/app.jsx"></script>
-
-  <script type="text/babel">
-    const container = document.getElementsByTagName('react-container')[0];
-    const root = ReactDOM.createRoot(container);
-    root.render(<App />);
-  </script>
-</body>
+          const setlanguage = (slanguage) => {
+            setLanguage(slanguage)
+            dropdown.current.classList.remove('open')
+            console.log(slanguage)
+          }
+          return(
+            <div className="welcome-screen">
+              <div className="welcome-totem">
+                <div className="greeting">{language.greeting}</div>
+                <img src="./person.svg" className="person"/>
+                <div className="language-container">
+                  <div className="selected-language" onClick={(e) => dropdown.current.classList.add('open')}>{language.lang}</div>
+                  <div className="language-dropdown" ref={dropdown}>
+                    {
+                      languages.map(item => (<div className="language" onClick={(e) => setlanguage(item)}>{item.lang}</div>))
+                    }
+                  </div>    
+                </div>
+                <div className="confirm-language"><img src="./check-mark.svg" /></div>
+              </div>
+              
+            </div>
+          )
+        };
+        return (
+          <div className="app-interface">
+            <WelcomeScreen /> 
+          </div>
+        )
+      } 
+    </script>
+    
+    <script type="text/babel">
+      const container = document.getElementsByTagName('react-container')[0]
+      const root = ReactDOM.createRoot(container)
+      root.render(<App />)
+    </script>
+    
+  </body>
 </html>
+
+
+

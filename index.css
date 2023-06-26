@@ -1,14 +1,18 @@
 :root {
-  font-size: 16px;
+  font-size: 16pt;
+  --blue: #2d54d5;
+  --red: #d4382c
 }
 
 * {
   font-family: Poppins;
   transition: 0.2s ease all;
+  font-size: 0px;
 }
 
 body {
-  margin: 0px
+  margin: 0px;
+  font-size: 0px;
 }
 
 react-container {
@@ -19,3 +23,130 @@ react-container {
   width: 100vw;
 }
 
+
+.welcome-screen {
+  background-color: var(--red);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+
+  .welcome-totem {
+    display: grid;
+  }
+  
+  .greeting {
+    font-size: 5rem;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding-bottom: 4rem;
+    line-height: 1;
+    animation: fadeDown 0.4s forwards;
+  }
+
+    @keyframes fadeDown {
+      0% {
+        opacity: 0;
+        margin-top: -1rem;
+      }
+      100% {
+        margin-top: 0rem;
+        opacity: 1;
+      }
+    }
+
+  .person {
+    width: 70vw;
+    margin: 0 auto;
+    margin-bottom: -3rem;
+  }
+  
+  .language-container::before {
+    content: 'Select language';
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    top: -3.5rem;
+  }
+  
+  .language-container {
+    position: relative;
+  }
+
+    .language-label {
+      font-size: 2rem;
+      color: white;
+      font-weight: 600;
+    }
+  
+    .selected-language, .language {
+      background-color: white;
+      font-size: 2.75rem;
+      width: 80vw;
+      box-sizing:border-box;
+      padding: 1.75rem 3rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .language-dropdown.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+  
+    .language:active { 
+      background-color: var(--blue);
+      color: white;
+    }
+  
+      .selected-language {
+        border-radius: 4rem;
+        position: relative;
+      }
+  
+    .language-dropdown {
+      display: grid;
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
+  
+    .language-dropdown > .language {
+      border-bottom: 1px solid #ccc;
+    } 
+  
+    .language-dropdown > .language:first-child {
+      border-radius: 4rem 4rem 0 0;
+    } 
+    
+    .language-dropdown > .language:last-child {
+      border-radius: 0 0 4rem 4rem;
+    }
+
+  .confirm-language {
+    height: 7rem;
+    width: 7rem;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-top: 3rem;
+  }
+
+  .confirm-language:active {
+    background-color: var(--blue);
+  }
+
+  .confirm-language:active img {
+    
+  }
+  
+    .confirm-language img {
+      height: 4rem;
+    }
+}

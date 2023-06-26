@@ -7,7 +7,7 @@ const App = () => {
       <div className="welcome-screen">
         <div className="selected-language">
           {
-            languages.map(item => (<div className="language">{item}</div>));
+            languages.map(item => (<div className="language">{item}</div>))
           }
         </div>    
       </div>
