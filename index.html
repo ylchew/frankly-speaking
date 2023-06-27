@@ -182,7 +182,7 @@
                 </div>
                 <div className="confirm-language"  onClick={(e) => setglanguage(language.lang)}><img src="./Assets/check-mark.svg" /></div>
                 {
-                  (gLanguage == "notready") ? <NotReady /> : null
+                  (language.lang != "English" || language.lang != "中文") ? <NotReady /> : null
                 }
               </div>
             </div>
