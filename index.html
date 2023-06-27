@@ -116,6 +116,7 @@
               greeting: 'Hi there!'    
             }
           )
+          const notreadylang = ['Bahasa Melayu','தமிழ்']
           const dropdown = React.useRef(0)
           const languages = [
             {
@@ -182,7 +183,7 @@
                 </div>
                 <div className="confirm-language"  onClick={(e) => setglanguage(language.lang)}><img src="./Assets/check-mark.svg" /></div>
                 {
-                  (language.lang != "English" || language.lang != "中文") ? <NotReady /> : null
+                  (notreadylang.includes(language.lang)) ? <NotReady /> : null
                 }
               </div>
             </div>
