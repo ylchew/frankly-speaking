@@ -196,7 +196,7 @@
             const Crumbs = () => {
        
               return(
-                <div className={(gLanguage == "Chinese") ? "crumbs chinese" :"crumbs"}><div className="reset" onClick={(e) => setGLanguage('')}><img src="./assets/reset.svg" /></div>{translatedtext[gLanguage].page}</div>
+                <div className={(gLanguage == "Chinese") ? "crumbs chinese" :"crumbs"}><div className="reset" onClick={(e) => setGLanguage('')}><img src="./Assets/reset.svg" /></div>{translatedtext[gLanguage].page}</div>
               )
                 
             }
@@ -242,10 +242,10 @@
                 return(
                   <div className="audio-wrap" onClick={(e) => playAudio()}>
                     {
-                        (isplay) ? <div className="play-wrap"><div className="play"><img src="./assets/sound.gif" />reading aloud..</div></div> : null
+                        (isplay) ? <div className="play-wrap"><div className="play"><img src="./Assets/sound.gif" />reading aloud..</div></div> : null
                     } 
                     <audio ref={audioplayer}>
-                      <source src={"./assets/" + gLanguage + "-chatbubble" + props.val + ".mp3"}></source>
+                      <source src={"./Assets/" + gLanguage + "-chatbubble" + props.val + ".mp3"}></source>
                     </audio> 
                     {
                       props.children
@@ -270,7 +270,7 @@
                                 </div>
                                 <div className="user-bubble">
                                     <div className="user-text">
-                                       <img src="./assets/audio-speaker-on.png" />
+                                       <img src="./Assets/audio-speaker-on.png" />
                                     </div>
                                     <div className="chat-time">12:39</div>
                                 </div>
@@ -289,8 +289,8 @@
                             
                         </div>
                         <div className="talk-container">
-                            <div className="waves"><img src="./assets/audio-waves.png" /><img src="./assets/audio-waves.png" /><img src="./assets/audio-waves.png" /></div>
-                            <img src="./assets/audio.gif" />
+                            <div className="waves"><img src="./Assets/audio-waves.png" /><img src="./Assets/audio-waves.png" /><img src="./Assets/audio-waves.png" /></div>
+                            <img src="./Assets/audio.gif" />
                         </div>
                     </React.Fragment>
                 )
@@ -346,10 +346,10 @@
             return(
               <div className="audio-wrap" onClick={(e) => playAudio()}>
                 {
-                    (isplay) ? <div className="play-wrap"><div className="play"><img src="./assets/sound.gif" />reading aloud..</div><img src={"./images/hdb-" + gLanguage + "-" + tools.audio + "audio-active_"+props.val+".gif"} className="active-overlay"/></div> : null
+                    (isplay) ? <div className="play-wrap"><div className="play"><img src="./Assets/sound.gif" />reading aloud..</div><img src={"./images/hdb-" + gLanguage + "-" + tools.audio + "audio-active_"+props.val+".gif"} className="active-overlay"/></div> : null
                 } 
                 <audio ref={audioplayer}>
-                  <source src={"./assets/" + gLanguage + "-" + props.val + ".mp3"}></source>
+                  <source src={"./Assets/" + gLanguage + "-" + props.val + ".mp3"}></source>
                 </audio>
                 {
                   props.children
