@@ -490,7 +490,7 @@ react-container {
   font-size: 1rem;
   color: #222;
   height: 40vh;
-  bottom: 15vh;
+  bottom: 30vh;
   border-radius: 3rem;
   grid-template-rows: auto 1fr;
   box-sizing: border-box;
