@@ -19,8 +19,15 @@ body {
   font-size: 0px;
 }
 
+html {
+  display: standalone;
+  display:fullscreen;  
+}
+
 react-container {
   position: fixed;
+  display: standalone;
+  display:fullscreen;
   top: 0;
   left: 0;
   height: 100vh;
