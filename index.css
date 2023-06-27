@@ -18,12 +18,10 @@ body {
   margin: 0px;
   font-size: 0px;
 }
-
 html {
   display: standalone;
   display:fullscreen;  
 }
-
 react-container {
   position: fixed;
   display: standalone;
@@ -490,7 +488,7 @@ react-container {
   font-size: 1rem;
   color: #222;
   height: 40vh;
-  bottom: 30vh;
+  bottom: 15vh;
   border-radius: 3rem;
   grid-template-rows: auto 1fr;
   box-sizing: border-box;
