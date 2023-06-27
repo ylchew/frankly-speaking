@@ -542,7 +542,7 @@ react-container {
     }
     .chat-text::before {
       content:'';
-      background-image:url('./assets/audio-speaker-red.png');
+      background-image:url('./Assets/audio-speaker-red.png');
       background-size: contain;
       height:1.5rem;
       width: 1.5rem;
